@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #04060b;
+  color: #f8fafc;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #04060b;
+}
+::-webkit-scrollbar-thumb {
+  background: #0f172a;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00a8ff;
+}
+
+::selection {
+  background: #00a8ff;
+  color: #04060b;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 12px rgba(0, 168, 255, 0.6);
+}
+.text-glow-red {
+  text-shadow: 0 0 12px rgba(255, 0, 60, 0.6);
+}
+
+/* =========================
+   MARQUEE ANIMATION
+========================= */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 80s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+
+@keyframes rgbBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.hero-frame {
+  position: relative;
+  border-radius: 24px;
+}
+
+.hero-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+
+  background: linear-gradient(
+    90deg,
+    #004d98,
+    #a50044,
+    #006747,
+    #7a263a,
+    #004d98
+  );
+
+  background-size: 300% 300%;
+  animation: heroBorderFlow 18s linear infinite,
+           heroGlow 6s ease-in-out infinite;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+@keyframes heroBorderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+@keyframes heroGlow {
+
+  0%,
+  100% {
+    filter:
+      drop-shadow(0 0 8px #004d98)
+      drop-shadow(0 0 10px #a50044);
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 14px #006747)
+      drop-shadow(0 0 18px #7a263a);
+  }
+}
+
+filter: drop-shadow(0 0 10px rgba(255, 0, 60, 0.5));
+
+.hero-frame::before {
+  background-size: 400% 400%;
+}
+
+@keyframes heroBorderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+
+@keyframes shine {
+  0% {
+    left: -60px;
+  }
+  100% {
+    left: 110%;
+  }
+}
