@@ -141,7 +141,7 @@ lg:-translate-x-4
 "
 >
   <Image
-    src="/images/hero1.png"
+    src="/images/Myp.png"
     alt="Diparno"
     width={560}
     height={760}
