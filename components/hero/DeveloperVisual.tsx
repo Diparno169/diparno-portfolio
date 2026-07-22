@@ -30,7 +30,7 @@ export default function DeveloperVisual() {
 
   return (
     <div
-    className="relative mx-auto flex h-[640px] w-full max-w-[650px] items-center justify-center overflow-visible bg-transparent">
+    className="relative mx-auto flex h-[430px] sm:h-[560px] lg:h-[640px] w-full max-w-[650px] items-center justify-center overflow-visible bg-transparent">
       {/* HUD Scanner background layer */}
       <motion.div
   className="absolute inset-0 -translate-y-16 flex items-center justify-center bg-transparent"

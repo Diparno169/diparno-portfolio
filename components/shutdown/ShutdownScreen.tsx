@@ -57,7 +57,7 @@ const [boxHeight, setBoxHeight] = useState(160);
         const timer = setTimeout(() => {
           setDisplayed((prev) => [...prev, shutdownLines[lineIndex]]);
           setLineIndex((prev) => prev + 1);
-          setBoxHeight((prev) => prev + 28);
+          setBoxHeight((prev) => prev + (window.innerWidth < 640 ? 20 : 28));
         }, 150);
       
         return () => clearTimeout(timer);
@@ -93,7 +93,8 @@ const [boxHeight, setBoxHeight] = useState(160);
           >
             {/* Header */}
             <div className="px-6 pt-5 pb-4">
-              <h2 className="font-mono text-[14px] font-bold tracking-[0.10em] text-red-400">
+              <h2 className="font-mono text-[10px] sm:text-[12px] lg:text-[14px]
+tracking-[0.06em] font-bold  text-red-400">
                 SYSTEM SHUTDOWN SEQUENCE
               </h2>
             </div>
@@ -102,14 +103,14 @@ const [boxHeight, setBoxHeight] = useState(160);
             <div className="mx-6 border-t border-red-500/20" />
 
             {/* Terminal Body */}
-<div className="px-6 py-5 font-mono text-[12px] leading-8">
+<div className="px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-5 font-mono text-[10px] sm:text-[11px] lg:text-[12px]">
 
 {displayed.map((line, index) => (
   <p
     key={index}
     className={
       line === "System halted."
-        ? "mt-5 font-semibold text-emerald-400"
+        ? "mt-3 font-semibold text-emerald-400"
         : index === 0
         ? "font-semibold text-red-300"
         : "text-neutral-100"
@@ -122,7 +123,7 @@ const [boxHeight, setBoxHeight] = useState(160);
 
 
 {lineIndex >= shutdownLines.length && (
-  <p className="mt-10 text-center text-[10px] text-neutral-500">
+  <p className="mt-4 text-center text-[10px] text-neutral-500">
     Attempting to close browser tab...
   </p>
 )}
