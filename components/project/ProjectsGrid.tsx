@@ -20,15 +20,16 @@ export default function ProjectsGrid() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard
-            key={project.slug}
-            title={project.title}
-            description={project.description}
-            icon={project.icon}
-            accent={project.accent}
-            technologies={project.technologies}
-            github={project.github}
-            liveDemo={project.liveDemo}
-          />
+          key={project.slug}
+          title={project.title}
+          description={project.description}
+          image={project.image}
+          icon={project.icon}
+          accent={project.accent}
+          technologies={project.technologies}
+          github={project.github}
+          liveDemo={project.liveDemo}
+        />
         ))}
       </div>
     </div>

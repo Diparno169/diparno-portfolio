@@ -102,7 +102,7 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 text-sm text-gray">
             <li className="flex items-center gap-2">
-              <Mail size={15} className="text-blue" /> diparnochatterjee0@.com
+              <Mail size={15} className="text-blue" /> diparnochatterjee0@gmail.com
             </li>
             <li className="flex items-center gap-2">
               <Phone size={15} className="text-blue" /> +91 9832930356

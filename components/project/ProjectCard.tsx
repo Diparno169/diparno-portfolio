@@ -1,6 +1,7 @@
 "use client";
 
 import { memo } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -114,6 +115,7 @@ const ACCENT_CLASSES: Record<
 type Props = {
   title: string;
   description: string;
+  image: string;
   icon: CategoryIconName;
   accent: Accent;
   technologies: TechIconName[];
@@ -124,6 +126,7 @@ type Props = {
 function ProjectCard({
   title,
   description,
+  image,
   icon,
   accent,
   technologies,
@@ -167,25 +170,16 @@ function ProjectCard({
         />
 
         {/* abstract "device" mockup */}
-        <div className="absolute inset-0 flex items-center justify-center p-6">
-          <div className="relative h-full w-full max-w-[220px] rounded-lg border border-white/10 bg-bg/70 shadow-lg backdrop-blur-sm">
-            <div className="flex items-center gap-1.5 border-b border-white/10 px-3 py-2">
-              <span className="h-2 w-2 rounded-full bg-red/60" />
-              <span className="h-2 w-2 rounded-full bg-white/20" />
-              <span className="h-2 w-2 rounded-full bg-white/20" />
-            </div>
-            <div className="space-y-2 p-3">
-              <div className={`h-2 w-2/3 rounded-full ${a.bg}`} />
-              <div className="h-2 w-full rounded-full bg-white/10" />
-              <div className="h-2 w-5/6 rounded-full bg-white/10" />
-              <div className="mt-3 grid grid-cols-3 gap-1.5">
-                <div className={`h-8 rounded-md ${a.bg}`} />
-                <div className="h-8 rounded-md bg-white/5" />
-                <div className="h-8 rounded-md bg-white/5" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="absolute inset-0 p-3">
+  <div className="relative h-full w-full overflow-hidden rounded-xl border border-white/10">
+    <Image
+      src={image}
+      alt={title}
+      fill
+      className="object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+  </div>
+</div>
 
         {/* icon badge */}
         <div

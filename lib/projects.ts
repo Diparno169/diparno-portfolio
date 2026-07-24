@@ -3,6 +3,7 @@ import type { CategoryIconName, TechIconName } from "@/components/project/Projec
 export type Project = {
   slug: string;
   title: string;
+  image: string;
   description: string;
   icon: CategoryIconName;
   accent: "red" | "blue" | "green";
@@ -16,6 +17,7 @@ export const projects: Project[] = [
   {
     slug: "ecommerce-web-app",
     title: "E-Commerce Web App",
+    image: "",
     description:
       "A full-stack e-commerce platform with cart, payment gateway, admin panel and order management.",
     icon: "cart",
@@ -28,6 +30,7 @@ export const projects: Project[] = [
   {
     slug: "job-portal",
     title: "Job Portal",
+    image: "",
     description:
       "A job searching platform where users can find jobs, apply, and track applications with secure authentication.",
     icon: "briefcase",
@@ -40,6 +43,7 @@ export const projects: Project[] = [
   {
     slug: "blog-website",
     title: "Blog Website",
+    image: "",
     description:
       "A modern blog platform with rich text editor, categories, authentication and comment system.",
     icon: "edit",
@@ -52,6 +56,7 @@ export const projects: Project[] = [
   {
     slug: "portfolio-website",
     title: "Portfolio Website",
+    image: "",
     description:
       "A personal portfolio website to showcase my skills, projects and experiences with modern UI/UX.",
     icon: "user",
@@ -64,6 +69,7 @@ export const projects: Project[] = [
   {
     slug: "task-manager-app",
     title: "Task Manager App",
+    image: "",
     description:
       "A task management application to add, update, delete and organize daily tasks efficiently.",
     icon: "check",
@@ -75,7 +81,8 @@ export const projects: Project[] = [
   },
   {
     slug: "portfolio-website",
-    title: "Developer Portfolio",
+    title: "Weather-Dashboard(SkyLine)",
+    image: "/projects/portfolio.png",
     description:
       "A modern developer portfolio built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. It showcases my skills, projects, experience, and contact information with a premium responsive UI and interactive animations.",
     icon: "user",
