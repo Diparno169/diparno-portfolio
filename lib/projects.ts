@@ -74,15 +74,20 @@ export const projects: Project[] = [
     category: "Full Stack",
   },
   {
-    slug: "weather-app",
-    title: "Weather App",
+    slug: "portfolio-website",
+    title: "Developer Portfolio",
     description:
-      "A weather application that shows real-time weather updates using OpenWeather API with beautiful UI.",
-    icon: "weather",
-    accent: "green",
-    technologies: ["html5", "css3", "javascript"],
-    github: "https://github.com/diparno/weather-app",
-    liveDemo: "https://weather-demo.example.com",
+      "A modern developer portfolio built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. It showcases my skills, projects, experience, and contact information with a premium responsive UI and interactive animations.",
+    icon: "user",
+    accent: "red",
+    technologies: [
+      "nextjs",
+      "react",
+      "typescript",
+      "tailwind",
+    ],
+    github: "https://github.com/Diparno169/diparno-portfolio",
+    liveDemo: "https://weather-dashboard-pink-nu.vercel.app/",
     category: "Frontend",
   },
-];
+]
