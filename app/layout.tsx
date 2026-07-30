@@ -6,6 +6,7 @@ import Footer from "@/components/footer/Footer";
 import IntroLoader from "@/components/intro/IntroLoader";
 import { ShutdownProvider } from "@/context/ShutdownContext";
 import ShutdownScreen from "@/components/shutdown/ShutdownScreen";
+import JsonLd from "@/components/seo/JsonLd";
 import "./globals.css";
 
 const inter = Inter({
@@ -21,6 +22,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://diparno-portfolio.vercel.app"),
   title: "Diparno Chatterjee | Full Stack Developer",
   description:
     "Diparno Chatterjee - Full Stack Developer building digital experiences with code. React, Next.js, Node.js portfolio.",
@@ -30,6 +32,13 @@ export const metadata: Metadata = {
     "React Developer",
     "Next.js Portfolio",
   ],
+  alternates: {
+    canonical: "https://diparno-portfolio.vercel.app",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -40,6 +49,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
       <body className="bg-bg font-sans antialiased overflow-x-hidden">
+      <JsonLd />
+      
   <ShutdownProvider>
     <IntroLoader />
     <ShutdownScreen />
