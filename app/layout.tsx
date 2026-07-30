@@ -32,6 +32,10 @@ export const metadata: Metadata = {
     "React Developer",
     "Next.js Portfolio",
   ],
+  verification: {
+    google: "DaNxCGBpsR2V3JUGlfzUNmMHfWU7Ly0F758Neey9XQ8",
+  },
+  
   alternates: {
     canonical: "https://diparno-portfolio.vercel.app",
   },
@@ -50,7 +54,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
       <body className="bg-bg font-sans antialiased overflow-x-hidden">
       <JsonLd />
-      
+
   <ShutdownProvider>
     <IntroLoader />
     <ShutdownScreen />
