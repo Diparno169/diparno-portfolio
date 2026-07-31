@@ -35,12 +35,17 @@ export default function ContactInfo() {
 
         <div className="mt-4 space-y-2.5 font-mono text-[13px] leading-6 sm:text-sm">
           {infoLines.map((line) => (
-            <p key={line.label} className="flex flex-wrap gap-x-2 text-white">
+            <p
+            key={line.label}
+            className="flex flex-wrap items-start gap-x-2 text-white"
+          >
               <span className="text-gray">
                 &gt; {line.label.padEnd(maxLabelLen, " ")}
               </span>
               <span className="text-gray">:</span>
-              <span>{line.value}</span>
+              <span className="min-w-0 flex-1 break-all whitespace-normal">
+  {line.value}
+</span>
             </p>
           ))}
         </div>
