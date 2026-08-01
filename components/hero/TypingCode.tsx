@@ -146,9 +146,9 @@ export default function TypingCode() {
 
         <div className="flex items-center gap-1.5 sm:gap-3">
 
-          <span className="text-[11px] text-gray/60">
-            UTF-8
-          </span>
+        <span className="hidden sm:block text-[11px] text-gray/60">
+  UTF-8
+</span>
 
           <button
             onClick={() => selectLanguage("python")}

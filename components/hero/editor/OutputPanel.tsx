@@ -34,7 +34,9 @@ export default function OutputPanel({ result, isRunning }: OutputPanelProps) {
             )}
           </>
         ) : (
-          <span className="text-gray/40">Run your code to see output here.</span>
+          <span className="hidden sm:inline text-gray/40">
+  Run your code to see output here.
+</span>
         )}
       </div>
     </div>
