@@ -116,35 +116,35 @@ export default function TypingCode() {
 
       {/* Header */}
       <div className="flex items-center justify-between border-b border-border px-4 py-3">
-        <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3">
 
           <div className="flex gap-2">
   <motion.div
     animate={{ opacity: [1, 0.5, 1], scale: [1, 1.08, 1] }}
     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0 }}
-    className="h-3 w-3 rounded-full bg-red-500"
+    className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-red-500"
   />
 
   <motion.div
     animate={{ opacity: [1, 0.5, 1], scale: [1, 1.08, 1] }}
     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-    className="h-3 w-3 rounded-full bg-yellow-400"
+    className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-yellow-400"
   />
 
   <motion.div
     animate={{ opacity: [1, 0.5, 1], scale: [1, 1.08, 1] }}
     transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
-    className="h-3 w-3 rounded-full bg-green-500"
+    className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full bg-green-500"
   />
 </div>
 
-          <span className="text-xs font-medium text-white">
+<span className="ml-1 sm:ml-0 text-[11px] sm:text-xs font-medium text-white">
             portfolio.tsx
           </span>
 
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3">
 
           <span className="text-[11px] text-gray/60">
             UTF-8
@@ -254,17 +254,41 @@ export default function TypingCode() {
             </div>
 
             <div className="relative">
-  <button
-    onClick={handleBack}
-    className="absolute right-4 top-1/2 -translate-y-1/2 z-20 rounded-md border border-cyan-500/40 bg-slate-900/80 px-3 py-1.5 text-xs font-medium text-cyan-300 transition-all duration-300 hover:border-cyan-400 hover:bg-cyan-500/10 hover:text-white"
-  >
-    Return
-  </button>
 
   <OutputPanel
     result={result}
     isRunning={isRunning}
   />
+
+  <button
+    onClick={handleBack}
+    className="
+      absolute
+      right-4
+      bottom-3
+      sm:top-1/2
+      sm:bottom-auto
+      sm:-translate-y-1/2
+      z-20
+      rounded-md
+      border
+      border-cyan-500/40
+      bg-slate-900/80
+      px-3
+      py-1.5
+      text-xs
+      font-medium
+      text-cyan-300
+      transition-all
+      duration-300
+      hover:border-cyan-400
+      hover:bg-cyan-500/10
+      hover:text-white
+    "
+  >
+    Return
+  </button>
+
 </div>
           </motion.div>
         )}
